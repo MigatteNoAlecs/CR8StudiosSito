@@ -813,6 +813,25 @@ html.is-loading .site-shell {
   padding: 0.625rem 0;
 }
 
+@media (min-width: 1024px) {
+  .nav-toggle,
+  .mobile-nav-panel {
+    display: none !important;
+  }
+
+  .site-header__nav,
+  .site-header__actions {
+    display: flex;
+  }
+}
+
+@media (max-width: 1023px) {
+  .site-header__nav,
+  .site-header__actions {
+    display: none;
+  }
+}
+
 /* Hero */
 .hero-landing {
   position: relative;
