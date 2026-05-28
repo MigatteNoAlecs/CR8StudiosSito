@@ -10,42 +10,35 @@ export function Services() {
   const card = useRevealOnScroll({ y: 24, duration: 0.5 });
 
   return (
-    <section id="servizi" className="section border-t border-border">
+    <section id="servizi" className="section">
       <div className="container">
         <motion.div
           {...intro}
           className={revealClass("section-intro mx-auto max-w-2xl text-center")}
         >
           <p className="eyebrow">Servizi</p>
-          <h2 className="heading-lg mt-3">Cosa facciamo per te</h2>
+          <h2 className="heading-lg mt-3">Tutto il digitale che ti serve</h2>
           <p className="text-body mt-4">
-            Solo siti web e gestione social: niente di più, niente di meno.
+            Web, social e sistemi su misura — niente pacchetti generici.
           </p>
         </motion.div>
 
-        <div className="mx-auto mt-10 grid max-w-3xl gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2">
+        <div className="features-grid mt-10 sm:mt-14">
           {services.map((service, i) => (
             <motion.article
               key={service.title}
               {...card}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={revealClass(
-                "surface-card surface-card-interactive flex flex-col p-5 sm:p-7",
-              )}
+              className={revealClass("feature-card")}
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky/10 text-sky">
+              <div className="feature-card__icon">
                 <Icon name={service.icon} className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-white">{service.title}</h3>
-              <p className="text-body mt-3 flex-1 text-sm">{service.description}</p>
-              <ul className="mt-6 flex flex-wrap gap-2">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <ul className="feature-card__tags">
                 {service.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-md bg-elevated px-2.5 py-1 text-xs font-medium text-zinc-500"
-                  >
-                    {tag}
-                  </li>
+                  <li key={tag}>{tag}</li>
                 ))}
               </ul>
             </motion.article>

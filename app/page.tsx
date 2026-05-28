@@ -1,35 +1,33 @@
-import Script from "next/script";
 import { About } from "@/components/About";
 import { Clients } from "@/components/Clients";
 import { CtaBand } from "@/components/CtaBand";
+import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Loader } from "@/components/Loader";
-import { Particles } from "@/components/Particles";
+import { Metrics } from "@/components/Metrics";
+import { Process } from "@/components/Process";
+import { ProductBooking } from "@/components/ProductBooking";
 import { Services } from "@/components/Services";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
     <>
-      <Script id="loading-gate" strategy="beforeInteractive">
-        {`document.documentElement.classList.add("is-loading")`}
-      </Script>
-      <Loader />
-      <div className="site-shell">
-        <Particles />
-        <Header />
-        <div className="relative z-10">
-          <main id="contenuto">
-            <Hero />
-            <Services />
-            <Clients />
-            <About />
-            <CtaBand />
-          </main>
-          <Footer />
-        </div>
-      </div>
+      <Header />
+      <main id="contenuto">
+        <Hero />
+        <Metrics />
+        <Process />
+        <Services />
+        <Clients />
+        <ProductBooking />
+        <Testimonials />
+        <About />
+        <Faq />
+        <CtaBand />
+      </main>
+      <Footer />
     </>
   );
 }

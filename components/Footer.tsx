@@ -7,49 +7,54 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 border-t border-border py-10 pb-[calc(2.5rem+env(safe-area-inset-bottom))] sm:py-12">
-      <div className="container">
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
-          <div>
-            <Link href="#" aria-label="CR8 — Home">
-              <Logo variant="footer" />
-            </Link>
-            <p className="text-body mt-4 max-w-xs text-sm">
-              Siti web e social. Francavilla Fontana, Puglia.
-            </p>
-          </div>
-
-          <nav aria-label="Footer">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-500 transition-colors hover:text-sky"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="text-sm">
-            <Link
-              href={SITE.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-zinc-500 transition-colors hover:text-sky"
-            >
-              <Icon name="instagram" className="h-4 w-4" />
-              Instagram
-            </Link>
-          </div>
+    <footer className="site-footer">
+      <div className="container site-footer__grid">
+        <div className="site-footer__brand">
+          <Link href="#" aria-label="CR8 Studios home">
+            <Logo variant="footer" />
+          </Link>
+          <p className="text-body mt-4 text-sm max-w-xs">
+            Siti web, social media e prodotti digitali. Francavilla Fontana, Puglia.
+          </p>
         </div>
-
-        <p className="text-body mt-10 border-t border-border pt-8 text-center text-xs sm:text-left">
-          © {year} CR8 Studios. Tutti i diritti riservati.
-        </p>
+        <div>
+          <h4 className="site-footer__title">Navigazione</h4>
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="site-footer__link">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <div>
+          <h4 className="site-footer__title">Prodotto</h4>
+          <Link href={SITE.bookingUrl} className="site-footer__link" target="_blank" rel="noopener">
+            CR8 Booking
+          </Link>
+          <Link href={`${SITE.bookingUrl}/admin/?registrati=1`} className="site-footer__link" target="_blank" rel="noopener">
+            Prova CR8 Booking
+          </Link>
+        </div>
+        <div>
+          <h4 className="site-footer__title">Contatti</h4>
+          <a href={`mailto:${SITE.email}`} className="site-footer__link">
+            {SITE.email}
+          </a>
+          <a href={SITE.phoneHref} className="site-footer__link">
+            {SITE.phone}
+          </a>
+          <Link
+            href={SITE.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="site-footer__link inline-flex items-center gap-2"
+          >
+            <Icon name="instagram" className="h-4 w-4" />
+            Instagram
+          </Link>
+        </div>
+      </div>
+      <div className="container site-footer__bottom">
+        <p>© {year} CR8 Studios. Tutti i diritti riservati.</p>
       </div>
     </footer>
   );

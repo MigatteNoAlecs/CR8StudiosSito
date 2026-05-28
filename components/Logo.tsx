@@ -7,9 +7,9 @@ const config: Record<
   { src: string; alt: string; className: string }
 > = {
   nav: {
-    src: LOGO_CR8,
-    alt: "CR8",
-    className: "h-8 w-auto sm:h-9",
+    src: LOGO,
+    alt: "CR8 Studios",
+    className: "h-9 w-auto sm:h-10",
   },
   hero: {
     src: LOGO,
@@ -22,9 +22,9 @@ const config: Record<
     className: "mx-auto h-[4.5rem] w-auto sm:h-24 md:h-28",
   },
   footer: {
-    src: LOGO_CR8,
-    alt: "CR8",
-    className: "h-7 w-auto sm:h-8",
+    src: LOGO,
+    alt: "CR8 Studios",
+    className: "h-12 w-auto sm:h-14",
   },
 };
 

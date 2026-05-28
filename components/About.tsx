@@ -17,7 +17,7 @@ export function About() {
           <p className="eyebrow">Chi siamo</p>
           <h2 className="heading-lg mt-3">
             Il digitale, con un volto{" "}
-            <span className="text-sky">umano</span>
+            <span className="text-gradient">umano</span>
           </h2>
           <p className="text-body mt-5">
             CR8 Studios è un&apos;agenzia giovane con sede a Francavilla Fontana. Realizziamo

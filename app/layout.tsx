@@ -13,19 +13,22 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#09090b",
+  themeColor: "#06090f",
 };
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | Siti web e social media`,
+  title: `${SITE.name} | Siti web, social media e prodotti digitali`,
   description:
-    "Agenzia a Francavilla Fontana. Realizziamo siti web e gestiamo Instagram e TikTok con storie e reel.",
+    "Agenzia a Francavilla Fontana. Siti web su misura, gestione social con reel e CR8 Booking per ristoranti.",
+  metadataBase: new URL("https://www.cr8studios.it"),
+  alternates: { canonical: "https://www.cr8studios.it/" },
   openGraph: {
     title: SITE.name,
     description:
-      "Siti web su misura e gestione social con storie e reel. Francavilla Fontana, Puglia.",
+      "Siti web su misura, social media e CR8 Booking. Francavilla Fontana, Puglia.",
     locale: "it_IT",
     type: "website",
+    url: "https://www.cr8studios.it/",
   },
 };
 

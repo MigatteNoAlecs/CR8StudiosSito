@@ -8,22 +8,15 @@ export function CtaBand() {
   const reveal = useRevealOnScroll({ y: 16, duration: 0.5 });
 
   return (
-    <section id="contatti" className="border-y border-border bg-surface/80 py-12 sm:py-16">
-      <motion.div
-        {...reveal}
-        className={revealClass(
-          "container flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left",
-        )}
-      >
-        <motion.div className="max-w-xl">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">
-            Hai un progetto in mente?
-          </h2>
-          <p className="text-body mt-2 text-sm sm:text-base">
-            Raccontaci la tua idea: sito, social o entrambi. Ti rispondiamo presto.
+    <section id="contatti" className="cta-banner">
+      <motion.div {...reveal} className={revealClass("cta-banner__inner container")}>
+        <div>
+          <h2 className="heading-lg">Pronto a far crescere il tuo business online?</h2>
+          <p className="text-body mt-3 max-w-lg">
+            Raccontaci il progetto — sito, social o entrambi. Ti rispondiamo in breve.
           </p>
-        </motion.div>
-        <BookingButton className="btn-mobile-full w-full shrink-0 sm:w-auto sm:min-w-[11rem]" />
+        </div>
+        <BookingButton className="btn-mobile-full shrink-0 sm:min-w-[12rem]" />
       </motion.div>
     </section>
   );
