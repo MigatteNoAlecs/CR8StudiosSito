@@ -9,8 +9,6 @@ import { Metrics } from "@/components/Metrics";
 import { Process } from "@/components/Process";
 import { ProductBooking } from "@/components/ProductBooking";
 import { Services } from "@/components/Services";
-import { Testimonials } from "@/components/Testimonials";
-
 export default function Home() {
   return (
     <>
@@ -22,7 +20,6 @@ export default function Home() {
         <Services />
         <Clients />
         <ProductBooking />
-        <Testimonials />
         <About />
         <Faq />
         <CtaBand />

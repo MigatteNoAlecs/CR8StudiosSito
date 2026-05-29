@@ -128,27 +128,6 @@ export const aboutPoints = [
   { text: "Radici a Francavilla Fontana, lavoro in tutta la Puglia", icon: "map-pin" as const },
 ] as const;
 
-export const testimonials = [
-  {
-    quote:
-      "«CR8 ci ha messo online in tempi record. Il sito è pulito e le prenotazioni arrivano davvero.»",
-    name: "Team Richardus",
-    role: "Trattoria · Puglia",
-  },
-  {
-    quote:
-      "«Finalmente qualcuno che capisce sia il web che i social — un unico referente, zero confusione.»",
-    name: "Cliente ristorazione",
-    role: "Locale · Salento",
-  },
-  {
-    quote:
-      "«Reel e storie curati: il profilo Instagram finalmente sembra professionale.»",
-    name: "Attività locale",
-    role: "Food & beverage",
-  },
-] as const;
-
 export const faqItems = [
   {
     q: "Lavorate solo in Puglia?",
