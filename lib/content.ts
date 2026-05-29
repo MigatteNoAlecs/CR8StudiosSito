@@ -83,18 +83,6 @@ export const clients = [
     domain: "moodpizzeria.it",
     category: "Ristorazione",
   },
-  {
-    name: "Kinyo Pokeria",
-    url: "https://www.kinyopokeria.it",
-    domain: "kinyopokeria.it",
-    category: "Ristorazione",
-  },
-  {
-    name: "St. Ermin's",
-    url: "https://www.sterminspub.it",
-    domain: "sterminspub.it",
-    category: "Pub & locale",
-  },
 ] as const;
 
 export const services = [
