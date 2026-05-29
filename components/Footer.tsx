@@ -35,6 +35,21 @@ export function Footer() {
           </Link>
         </div>
         <div>
+          <h4 className="site-footer__title">Legale</h4>
+          <Link href="/privacy" className="site-footer__link">
+            Privacy
+          </Link>
+          <Link href="/cookie" className="site-footer__link">
+            Cookie
+          </Link>
+          <Link href="/termini" className="site-footer__link">
+            Termini
+          </Link>
+          <Link href="/note-legali" className="site-footer__link">
+            Note legali
+          </Link>
+        </div>
+        <div>
           <h4 className="site-footer__title">Contatti</h4>
           <a href={`mailto:${SITE.email}`} className="site-footer__link">
             {SITE.email}
@@ -55,6 +70,12 @@ export function Footer() {
       </div>
       <div className="container site-footer__bottom">
         <p>© {year} CR8 Studios. Tutti i diritti riservati.</p>
+        <nav className="site-footer__legal-row" aria-label="Collegamenti legali">
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/cookie">Cookie</Link>
+          <Link href="/termini">Termini</Link>
+          <Link href="/note-legali">Note legali</Link>
+        </nav>
       </div>
     </footer>
   );

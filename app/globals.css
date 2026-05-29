@@ -1373,7 +1373,7 @@ html.is-loading .site-shell {
   }
 
   .site-footer__grid {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
   }
 
   .cta-banner__inner {
@@ -1381,6 +1381,144 @@ html.is-loading .site-shell {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+/* Legal pages */
+.legal-page-wrap {
+  padding: calc(var(--header-h, 72px) + 1.5rem) 0 3rem;
+  min-height: 50vh;
+}
+
+.legal-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.legal-subnav a {
+  color: var(--zinc-500);
+  text-decoration: none;
+}
+
+.legal-subnav a:hover {
+  color: var(--sky-400);
+}
+
+.legal-doc-wrap {
+  max-width: 44rem;
+}
+
+.legal-doc h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.legal-doc__updated {
+  margin: 0 0 1.75rem;
+  font-size: 0.8125rem;
+  color: var(--zinc-500);
+}
+
+.legal-lead {
+  font-size: 1.05rem;
+  color: var(--zinc-500);
+  margin: 0 0 1.5rem;
+}
+
+.legal-doc h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.legal-doc p,
+.legal-doc li {
+  color: var(--zinc-300);
+  line-height: 1.65;
+}
+
+.legal-doc ul {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.legal-doc a {
+  color: var(--sky-400);
+}
+
+.legal-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.legal-doc th,
+.legal-doc td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-doc th {
+  background: var(--surface);
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 1rem;
+  background: rgba(6, 9, 15, 0.96);
+  border-top: 1px solid var(--border);
+}
+
+.cookie-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--zinc-300);
+  max-width: 40rem;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.site-footer__legal-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.site-footer__legal-row a {
+  display: inline;
+  font-size: 0.75rem;
+  color: var(--zinc-500);
+  text-decoration: none;
+}
+
+.site-footer__legal-row a:hover {
+  color: var(--sky-400);
 }
 
 @media (min-width: 900px) {

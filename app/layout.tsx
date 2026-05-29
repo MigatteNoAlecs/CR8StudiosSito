@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { CookieBanner } from "@/components/CookieBanner";
 import { SITE } from "@/lib/content";
 import "./globals.css";
 
@@ -37,7 +38,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it" className={plusJakarta.variable}>
-      <body className="min-h-[100dvh] antialiased">{children}</body>
+      <body className="min-h-[100dvh] antialiased">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
