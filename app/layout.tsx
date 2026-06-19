@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     "Agenzia a Francavilla Fontana. Siti web su misura, gestione social con reel e CR8 Booking per ristoranti.",
   metadataBase: new URL("https://www.cr8studios.it"),
   alternates: { canonical: "https://www.cr8studios.it/" },
+  icons: {
+    icon: "/logostudios.png",
+    shortcut: "/logostudios.png",
+    apple: "/logostudios.png",
+  },
   openGraph: {
     title: SITE.name,
     description:
@@ -30,6 +35,14 @@ export const metadata: Metadata = {
     locale: "it_IT",
     type: "website",
     url: "https://www.cr8studios.it/",
+    images: [
+      {
+        url: "/logostudios.png",
+        width: 1200,
+        height: 1200,
+        alt: "CR8 Studios Logo",
+      },
+    ],
   },
 };
 
@@ -38,6 +51,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it" className={plusJakarta.variable}>
+      <head>
+        <link rel="icon" href="/logostudios.png" type="image/png" />
+        <link rel="shortcut icon" href="/logostudios.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logostudios.png" />
+        <meta name="theme-color" content="#06090f" />
+      </head>
       <body className="min-h-[100dvh] antialiased">
         {children}
         <CookieBanner />
